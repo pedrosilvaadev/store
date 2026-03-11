@@ -15,12 +15,13 @@ const getProducts = async ({ category, key }: ProductsProps) => {
     }
   }
 
-  let query = "SELECT * FROM products ORDER BY name ASC";
+  let query = "SELECT * FROM products";
   const params: any[] = [];
   if (category) {
     query += " WHERE category = $1";
     params.push(category);
   }
+  query += " ORDER BY name ASC";
 
   const { rows } = await pool.query(query, params);
 
