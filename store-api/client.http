@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:4000/api
+
+# @name get_products
+GET {{baseUrl}}/products
+Content-Type: application/json
