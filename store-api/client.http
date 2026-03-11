@@ -3,3 +3,14 @@
 # @name get_products
 GET {{baseUrl}}/products
 Content-Type: application/json
+
+###
+
+# @name create_order
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "product_id": 1,
+  "quantity": 2
+}
