@@ -1,0 +1,55 @@
+# -----------------------------
+# Node / JavaScript / TypeScript
+# -----------------------------
+node_modules/
+**/node_modules/        # ignora node_modules em todos os pacotes
+dist/
+build/
+coverage/
+*.log
+*.tsbuildinfo           # TypeScript incremental build
+
+# -----------------------------
+# Environment files
+# -----------------------------
+.env
+.env.local
+.env.*.local
+!.env.example           # manter arquivo de exemplo
+
+# -----------------------------
+# OS
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDEs / Editors
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker-compose.override.yml
+*.env.docker
+
+# -----------------------------
+# Monorepo / pnpm / Yarn / Lerna
+# -----------------------------
+.pnp.*
+.pnpm-store/
+.yarn/*
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.npm/
+
+# -----------------------------
+# Optional: logs e coverage por pacote
+# -----------------------------
+**/coverage/
+**/dist/
+**/build/
