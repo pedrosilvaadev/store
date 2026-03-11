@@ -1,3 +1,8 @@
+<img width="1516" height="800" alt="image" src="https://github.com/user-attachments/assets/cdd7d8ce-ddd6-4579-a224-434951e8092a" />
+<img width="1516" height="800" alt="image" src="https://github.com/user-attachments/assets/f33d5e4c-293f-4031-8b97-c17249ee3dcc" />
+<img width="1516" height="800" alt="image" src="https://github.com/user-attachments/assets/969b8e63-0207-4bb6-b59c-8783aaffc165" />
+
+
 # Store
 
 This project is split into two applications:
