@@ -11,6 +11,12 @@ POST {{baseUrl}}/orders
 Content-Type: application/json
 
 {
-  "product_id": 1,
+  "productId": 1,
   "quantity": 2
 }
+
+###
+
+# @name get_orders
+GET {{baseUrl}}/orders
+Content-Type: application/json

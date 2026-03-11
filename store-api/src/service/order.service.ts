@@ -6,7 +6,6 @@ interface OrderProps {
 }
 
 const createOrder = async ({ product_id, quantity }: OrderProps) => {
-  console.log({ product_id, quantity });
   const client = await pool.connect();
   const productIdNumber = Number(product_id);
   const quantityNumber = Number(quantity);
@@ -50,6 +49,25 @@ const createOrder = async ({ product_id, quantity }: OrderProps) => {
   }
 };
 
+const getOrders = async () => {
+  const { rows } = await pool.query(`
+    SELECT 
+      o.id AS id,
+      o.product_id as "productId",
+      o.quantity,
+      o.created_at as "createdAt",
+      o.total_cents as "totalCents",
+      p.name AS "productName",
+      p.category AS "productCategory"
+    FROM orders o
+    JOIN products p ON o.product_id = p.id
+    ORDER BY o.created_at DESC
+  `);
+
+  return rows;
+};
+
 export const ordersService = {
   createOrder,
+  getOrders,
 };
